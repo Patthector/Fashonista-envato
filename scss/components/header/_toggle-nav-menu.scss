@@ -1,0 +1,21 @@
+//---------------------------------------
+//NAVEGATION MENU FOR SMALL SCREENS
+//--------------------------------------
+ul#toggle-menu{
+  width: 60%;
+  margin:0 20%;
+  text-align: center;
+  background-color: getColor('scale-of-grey','black');
+  li{
+    padding:.5em 0;
+    a{
+      @include mx_font-styles($font-size: px-to-em(13px),$text-transform: uppercase,$letter-spacing: 2px,$color:getColor('scale-of-grey','white'));
+      width: 100%;
+      &:hover{
+        border-bottom:.5px solid getColor('scale-of-grey','Tundora');
+      }
+    }
+  }
+}  //---------------------------------------
+  //--end--NAVEGATION MENU FOR SMALL SCREENS
+  //--------------------------------------

@@ -1,0 +1,49 @@
+//=========================================================================================================
+//Variables.scss
+//==================================================================================================
+
+//Font Stack
+$primary-font          : 'Limelight', cursive;
+$quote-font            : 'Satisfy', cursive;
+$secondary-font        : 'Open Sans', sans-serif;
+
+//Palette colors
+$palette : (
+  "basic" : (
+            "white"      : #FFFFFF,
+            "lighter-black":lighten(#000000,50%),
+            "middle-light-black":lighten(#000000,25%),
+            "light-black":lighten(#000000,15%),
+            "black"      : #000000,
+            "mirage"     : #161822,
+            "grey"       : lighten(#000000,25%),
+            "light-grey" : lighten(#000000,50%),
+
+  ),
+  "scale-of-grey" : (
+            "white"                 : #FFFFFF,
+            "Mercury"               :darken(#ffffff,10%),
+            "Silver"                :darken(#ffffff,20%),
+            "Nobel"                 :darken(#ffffff,30%),
+            "Dusty Gray"            :darken(#ffffff,40%),
+            "grey"                  :darken(#ffffff,50%),
+            "Dove Gray"             :darken(#ffffff,60%),
+            "Tundora"               :darken(#ffffff,70%),
+            "Mine Shaft"            :darken(#ffffff,80%),
+            "Cod Grey"              :darken(#ffffff,90%),
+            "Almost Black"          :darken(#ffffff,95%),
+            "black"                 : #000000,
+  ),
+
+);
+//Margins
+$basic-margin: 15px;
+$card-margin: px-to-em(20px);
+$card-padding:px-to-em(15px);
+
+//Font-Sizes
+$icon-size:18px;
+$quote-size:15px;
+$author-quote-size:13px;
+$paragraph-font-size:13px;
+$secondary-menu-font-size:13px;

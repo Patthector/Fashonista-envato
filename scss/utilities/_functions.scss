@@ -1,0 +1,24 @@
+//=========================================================================================================
+//Functions.scss
+//==================================================================================================
+
+//Retriving a color from the Palette color
+@function getColor(
+                    $palette-color,
+                    $color-name){
+  @return map_get(map_get($palette,$palette-color),$color-name);
+
+}
+
+//From pixels to percentages
+@function px-to-em($px){
+
+  @return ($px/16px) * 1em;
+}
+
+@function the-grid($content-width,$number-cols,$gutter-width){
+
+  $col-width:($content-width / $number-cols);
+  @warn($col-width);
+  @return (($col-width / $content-width)*100%) - ($gutter-width * 2);
+}

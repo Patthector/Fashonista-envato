@@ -1,0 +1,23 @@
+//=========================================================================================================
+//quote-card.scss
+//=========================================================================================================
+
+.quote-card{
+  background-color:getColor('scale-of-grey','black');
+  padding:px-to-em(10px);
+  font-family: $quote-font;
+  width: 100%;
+  text-align: center;
+  font-size: px-to-em($quote-size);
+  margin-bottom: $card-margin;
+  div {
+    margin:0 0 1em 0;
+    padding: 0;
+    i{
+      color:getColor('basic','light-grey');
+      font-family: $secondary-font;
+      font-size: px-to-em($author-quote-size);
+    }
+  }
+
+}

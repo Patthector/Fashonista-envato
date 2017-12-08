@@ -1,0 +1,18 @@
+//-----------------------------------------
+//NAVEGATION DESIGN
+//-----------------------------------------
+nav ul li {
+  a{
+    text-transform: uppercase;
+    &:hover{
+      border-bottom:3px solid getColor('scale-of-grey','black');
+    }
+    @media (min-width:800px){
+      font-size:px-to-em(11px);
+      letter-spacing: 1px;
+    }
+    @media (min-width: 945px){
+      font-size:px-to-em(12px);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+//=========================================================================================================
+//Mixins.scss
+//==================================================================================================
+
+//H2 - Mixin
+@mixin H2 ($color,$font-weight,$font-size) {
+  color:$color;
+  font-size:$font-size;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+  @content;
+}
+
+//FLEX display -Mixin
+@mixin flexx (
+              $flex-direction,
+              $flex-wrap,
+              $justify-content)
+{
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  @content;
+
+}
+
+//BARS dividing the menu
+@mixin leading-bars($color,$size,$start-point) {
+  &:nth-last-child( n+ #{$start-point} )::after{
+    content:"|";
+    display: inline-block;
+    padding-left: px-to-em($size);
+    color:#{$color};
+  }
+
+}
+
+//BUTTONS
+@mixin mx_button(
+                $background-color,
+                $color,
+                $width: null,
+                $text-transform:uppercase) {
+                  width:$width;
+                  background-color:$background-color;
+                  color:$color;
+                  font-family: $secondary-font;
+                  text-transform: $text-transform;
+                  @content;
+
+}
+
+//FONTS-STYLES
+@mixin mx_font-styles(
+                      $font-family:null,
+                      $font-size:null,
+                      $font-weight:null,
+                      $text-transform:null,
+                      $text-decoration:null,
+                      $text-align:null,
+                      $letter-spacing:null,
+                      $color:null
+) {
+  font-family:$font-family;
+  font-size:$font-size;
+  font-weight:$font-weight;
+  text-transform:$text-transform;
+  text-decoration:$text-decoration;
+  text-align:$text-align;
+  letter-spacing:$letter-spacing;
+  color:$color;
+  @content;
+}
+
+//ANIMATION TRANSFORM-TRANSITION
+@mixin mx_animations($duration,$delay:null,$func:null) {
+  transition: all #{$duration} #{$delay} #{$func};
+  @content;
+}

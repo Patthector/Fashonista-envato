@@ -1,0 +1,33 @@
+//=========================================================================================================
+//Normalize.scss
+//=========================================================================================================
+*{
+  box-sizing: border-box;
+}
+:root{
+  font-family: $secondary-font;
+  font-size: px-to-em(16px);
+}
+header,
+footer{
+  width:100%;
+}
+button.nav-small-screens{
+  display: none;
+}
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+blockquote{
+  margin:0;
+  padding:px-to-em(10px);
+  font-size : px-to-em(28px);
+  color:getColor('basic','white');
+  line-height: 1.5;
+}
+a{
+  color:getColor('basic','grey');
+  text-decoration:none;
+}

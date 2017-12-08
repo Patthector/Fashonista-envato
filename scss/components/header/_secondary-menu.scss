@@ -1,0 +1,15 @@
+//-------------------------------------------------------
+//SECONDARY MENU
+//------------------------------------------------------
+& > ul.secondary-menu{
+  background-color : getColor('scale-of-grey','Almost Black');
+  color:getColor('scale-of-grey','Nobel');
+  li{
+      @include mx_font-styles($secondary-font,px-to-em(13px),$letter-spacing:-.5px);
+  }
+  li{
+    @include leading-bars(getColor('scale-of-grey','Mine Shaft'),5px,3);
+  }
+}//--------------------------------------
+//--end--SECONDARY-MENU
+//----------------------------------------

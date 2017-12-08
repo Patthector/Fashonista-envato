@@ -1,0 +1,26 @@
+//---------------------------------------
+//CARET/BUTTON/TOGGLE FOR NAVEGATION MENU
+//--------------------------------------
+div.caret{
+  margin-bottom:.5em;
+  i{
+    color:getColor('scale-of-grey','grey');
+    @include mx_font-styles($font-size: px-to-em(25px));
+    &.fa-angle-double-down{
+      @include mx_animations(1s){
+        transform: translateY(0) scale(1);
+        color:getColor('scale-of-grey','grey');
+      }
+    }
+  }
+  &:hover {
+    & i.fa-angle-double-down{
+      @include mx_animations(1s){
+        transform: translateY(5px) scale(1.3);
+        color:getColor('scale-of-grey','Mine Shaft');
+      }
+    }
+  }
+}//---------------------------------------
+//--end--CARET/BUTTON/TOGGLE FOR NAVEGATION MENU
+//--------------------------------------

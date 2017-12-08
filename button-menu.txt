@@ -1,0 +1,69 @@
+html////
+--------------
+<button id = "nav-button" class = 'nav-small-screens'>
+        <i class="fa fa-circle p-fa-first" aria-hidden="true"></i>
+        <i class="fa fa-circle p-fa-second" aria-hidden="true"></i>
+        <i class="fa fa-circle p-fa-third" aria-hidden="true"></i>
+      </button>
+------------------------
+------------------------
+css-animation////
+  button.nav-small-screens{
+    background-color: getColor('scale-of-grey','Cod Grey');
+    i{
+      font-size: px-to-em(.2px);
+      color:getColor('scale-of-grey','white');
+      &.p-fa-first{
+        transform: translateY(0px);
+        transition: all 1.5s .3s;
+      }
+      &.p-fa-second{
+        transform: translateY(0px);
+        transition: all 1.5s .1s;
+      }
+      &.p-fa-third{
+        transform: translateY(0px);
+        transition: all 1.5s;
+      }
+    }
+    &:hover {
+      & i.p-fa-first{
+        transition: all 1.5s;
+        transform: translateY(5px);
+      }
+      & i.p-fa-second{
+        transition: all 1.5s .1s;
+        transform: translateY(-5px);
+      }
+      & i.p-fa-third{
+        transition: all 1.5s .3s;
+        transform: translateY(5px);
+      }
+    }
+  }
+----------------------
+----------------------
+css-layout//////
+//NAVEGATION BUTTON FOR SMALL SCREENS
+    button.nav-small-screens{
+      position: relative;
+      width:30px;
+      height: 30px;
+      margin-left:-10px;
+      border:none;
+      border-radius: 100%;
+      i{
+        position: absolute;
+        width: 100%;
+        top: 42.5%;
+        &.p-fa-first{
+          left:20%;
+        }
+        &.p-fa-second{
+          right:0;
+        }
+        &.p-fa-third{
+          right:20%;
+        }
+      }
+    }

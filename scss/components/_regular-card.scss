@@ -1,0 +1,30 @@
+//=========================================================================================================
+//regular-card.scss/COMPONENT
+//=========================================================================================================
+
+.regular-card{
+
+  background-color:getColor('scale-of-grey','white');
+  margin-bottom: $card-margin;
+  padding: $card-padding;
+  p{
+    color: getColor('scale-of-grey','Dove Gray');
+    line-height:1.6;
+    font-size:12px;
+    text-align: center;
+    margin-bottom: px-to-em(20px);
+  }
+  footer ul li{
+    font-size: px-to-em(10px);
+    text-transform: uppercase;
+    margin-top:px-to-em(20px);
+    padding: 0;
+    i{
+      color:getColor('scale-of-grey','grey');
+      font-size: px-to-em(20px);
+    }
+    a{
+      font-size: px-to-em(20px);
+    }
+  }
+}
