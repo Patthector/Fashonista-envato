@@ -642,7 +642,7 @@ body {
     grid-gap: 0 20px;
     grid-auto-flow: dense;
     background-color: #e6e6e6; }
-    @media (max-width: 767px) {
+    @media (max-width: 599px) {
       body div.main-container {
         display: flex;
         flex-direction: row;
@@ -650,14 +650,21 @@ body {
         justify-content: flex-start;
         width: 90%;
         margin: 0 5%; } }
-    @media (min-width: 768px) and (max-width: 945px) {
+    @media (min-width: 600px) and (max-width: 919px) {
+      body div.main-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        grid-gap: 0 20px;
+        grid-auto-flow: dense;
+        margin: 0 5%; } }
+    @media (min-width: 920px) and (max-width: 944px) {
+      body div.main-container {
+        margin: 0 5%;
+        width: 90%; } }
+    @media (min-width: 945px) {
       body div.main-container {
         margin: 0 10%;
         width: 80%; } }
-    @media (min-width: 945px) {
-      body div.main-container {
-        margin: 0 12%;
-        width: 76%; } }
     body div.main-container div.div-menu {
       display: block;
       background-color: rgba(0, 0, 0, 0.9);
@@ -812,12 +819,12 @@ body > footer h2 {
   text-transform: uppercase;
   color: #e6e6e6;
   margin: 3.75em 0.9375em 1.25em; }
-body > footer h2:first-child {
+body > footer > h2 {
   margin: 0 0.9375em 1.875em;
   padding-top: 1.875em;
   color: #666666;
   text-align: center; }
-  body > footer h2:first-child span {
+  body > footer > h2 span {
     color: #e6e6e6; }
 body > footer p {
   font-size: 0.8125em;

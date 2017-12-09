@@ -20,14 +20,17 @@ $('#nav-button').on('click',function(){
 let grid = $("#grid");
 let children = grid.children();
 let rows = Math.ceil(children.length / 3);
-console.log("CHILDRENS");
-console.log(children);
+//lets set it for 2
+let windowWidth = $(this)["0"].self.innerWidth;
 
+if(windowWidth >= 600 && windowWidth < 919){
+  console.log(windowWidth);
+  console.log("Two columns layout");
+  rows = Math.ceil(children.length / 2);
+}
 var auxHeight = Math.ceil($(this).height() * rows);
-console.log("This is the auxHeight for the container "+auxHeight);
 
 var repetitions = Math.ceil(auxHeight / 10);/*10px*/
-console.log("Auxrepetitions "+repetitions);
 grid.css(`grid-template-rows`,`repeat(${repetitions},10px)`);
 
 ///giving the class to all my elements/cards
@@ -43,29 +46,37 @@ let c3=0;
 for (let i = 0; i < children.length; i++) {
   let Xcardx = $(`#grid div#card-${i+1}`);
   var finalResultx = Xcardx["0"]['scrollHeight'] + Xcardx.outerHeight();
-
-  if(isTheSmallestOne(c1,c2,c3,i)){
-    //c1 += children[i]['scrollHeight'];
-    c1 += finalResultx;
-  }
-  else if(isTheSmallestOne(c2,c1,c3,i)){
-    //c2 += children[i]['scrollHeight'];
-    c2 += finalResultx;
+  console.log(`card${i+1} ${finalResultx}`);
+  if(windowWidth >= 600 && windowWidth < 919){
+    if(isTheSmallestOne(c1,c2,c3 = Number.MAX_VALUE)){
+      c1 += finalResultx;
+    }
+    else if(isTheSmallestOne(c2,c1,c3 = Number.MAX_VALUE)){
+      c2 += finalResultx;
+    }
+    console.log(`c1:${c1}-c2:${c2}-c3${c3}`);
   }
   else{
-    //c3 += children[i]['scrollHeight'];
-    c3 += finalResultx;
+    if(isTheSmallestOne(c1,c2,c3)){
+      c1 += finalResultx;
+    }
+    else if(isTheSmallestOne(c2,c1,c3)){
+      c2 += finalResultx;
+    }
+    else{
+      c3 += finalResultx;
+    }
   }
 }
-console.log(`c1:${c1}  c2:${c2}  c3:${c3}`);
 
 let gridHeight = Math.max(Math.max(c3,c2),c1);
-console.log(`the height of the grid is ${gridHeight}`);
+if(windowWidth >= 600 && windowWidth < 919){
+  gridHeight = Math.max(c2,c1);
+}
 //********************************************************
 //sending the value back to CSS
 //********************************************************
 repetitions = Math.ceil(gridHeight / 10);/*10px*/
-console.log(repetitions);
 grid.css(`grid-template-rows`,`repeat(${repetitions+2},10px)`);
 
 /*************************************************************/
@@ -74,28 +85,14 @@ grid.css(`grid-template-rows`,`repeat(${repetitions+2},10px)`);
 for (let i = 0; i < children.length; i++) {
   var Xcard = $(`#card-${i+1}`);
   var finalResult = Math.ceil(Xcard["0"]['scrollHeight']) + Math.ceil(Xcard.outerHeight());
-  console.log(`Card-${i+1}`);
-  console.log(`scrollHeight-${Math.ceil(Xcard["0"]['scrollHeight'])}`);
-  console.log(`outerHeight-${Math.ceil(Xcard.outerHeight())}`);
-  console.log(`innerHeight-${Xcard.innerHeight()}`);
-  console.log(Xcard.height());
-  console.log('this is second for finalresult ',finalResult);
 
   //get how much each card needs to expand
-
-
   let cardSpan = Math.ceil(finalResult / 10);
-  console.log(`Card ${i+1} expand in ${cardSpan}`);
-    console.log("////////////////////");
   //later we will add it some margin.
   $(`#card-${i+1}`).css('grid-row-end',`span ${cardSpan-1}`);
   //the +1 is here to fix the margin-button problem
 }
 
-
-
-function isTheSmallestOne(v,sibling1,sibling2,i){
-
-
+function isTheSmallestOne(v,sibling1,sibling2){
   return v === Math.min(Math.min(v,sibling1),sibling2);
 }

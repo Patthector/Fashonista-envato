@@ -11,18 +11,25 @@ body{
 
     background-color:getColor('scale-of-grey','Mercury');
 
-    @media (max-width:767px){
+    @media (max-width:599px){
       @include flexx(row,wrap,flex-start);
       width: 90%;
       margin: 0 5%;
     }
-    @media (min-width:768px)and(max-width: 945px){
-      margin: 0 10%;
-      width: 80%;
+    @media (min-width:600px) and (max-width:919px){
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(45%,1fr));
+      grid-gap:0 20px;
+      grid-auto-flow:dense;
+      margin: 0 5%;
+    }
+    @media (min-width:920px)and(max-width: 944px){
+      margin: 0 5%;
+      width: 90%;
     }
     @media (min-width: 945px){
-      margin: 0 12%;
-      width: 76%;
+      margin: 0 10%;
+      width: 80%;
     }
     div.div-menu{
       display: block;

@@ -5,12 +5,12 @@
 //You need to target that particular footer because you
 //have another footer inside regular-card component
 body > footer{
-  h2{
+   h2{
     @include mx_font-styles($font-size:px-to-em(14px),
     $font-weight:bold,$text-transform: uppercase,$color:getColor('scale-of-grey','Mercury'));
     margin:px-to-em(60px) px-to-em($basic-margin) px-to-em(20px);
     }
-    & h2:first-child{
+    &>h2{
       margin: 0 px-to-em($basic-margin) px-to-em(30px);
       padding-top: px-to-em(30px);
       color:getColor('scale-of-grey','Dove Gray');
