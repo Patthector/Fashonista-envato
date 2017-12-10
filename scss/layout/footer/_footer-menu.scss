@@ -1,0 +1,28 @@
+//=========================================================================================================
+//FOOTER-MENU/FOOTER/LAYOUT
+//==================================================================================================
+div.footer-menu{
+  width: 100%;
+  margin-top:1em;
+  @include flexx(column,nowrap,center){}
+  @include mq($min:$small){
+    @include flexx(row,nowrap,space-between){
+      padding: 0 5%;
+    }
+  }
+  @include mq($min:$medium){
+    padding: 0 10%;
+  }
+  span{
+    font-size:px-to-em(11px);
+    margin:.7em;
+  }
+  ul{
+    @include flexx(row,nowrap,center);
+    margin:.7em;
+    li{
+      @include leading-bars(getColor('scale-of-grey','Dove Gray'),5px,2);
+      font-size:px-to-em(11px);
+    }
+  }
+}

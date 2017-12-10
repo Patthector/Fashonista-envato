@@ -1,0 +1,31 @@
+//-------------------------------------------------------
+//SOCIAL-MEDIA-MENU/LAYOUT
+//------------------------------------------------------
+
+ul.social-media-menu{
+  @include flexx(row,nowrap,center){
+    padding: 0  0 px-to-em(10px) 0;
+  }
+  li{
+    margin:px-to-em(7px);
+    &.caret{
+      margin:px-to-em(3px);
+    }
+    i{
+    font-size:px-to-em(16px);
+    color:getColor('scale-of-grey','Mine Shaft');
+    }
+  }
+  @include mq($min:$medium){
+    width:40%;
+    float: right;
+    padding: 0 10% 0 0;
+    margin: 20px 0 10px 0;
+    justify-content: flex-end;
+    //WE MAY NEED A CLEARFIX HERE
+    li:last-child{
+      margin-rigth:0;
+    }
+  };
+
+}//end*********SOCIAL MENU**************************

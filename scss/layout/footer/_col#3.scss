@@ -1,0 +1,29 @@
+//=================================================================
+//COL-#-2.SCSS
+//================================================================
+
+div.footer-social-media{
+  width: 36%;
+  @include mq($max:$medium - 1){
+    width: 100%;
+    padding:0 5%;
+  }
+  @include mq($min:$medium){
+    width: 45%;
+    padding-left:10%;
+  }
+  @include mq($min:$x-large){
+    width: 36%;
+    padding:0 10% 0 0;
+  }
+  ul.social-media-menu{
+    @include flexx(row,nowrap,flex-start);
+    li {
+      margin:px-to-em(20px) px-to-em($basic-margin);
+      i{
+      color:getColor('scale-of-grey','grey');
+      font-size:px-to-em(20px);
+      }
+    }
+  }
+}

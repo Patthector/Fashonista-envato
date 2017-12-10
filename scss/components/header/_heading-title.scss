@@ -1,16 +1,19 @@
 //--------------------------------------
-//MAIN HEADING
+//MAIN HEADING/COMPONENTS
 //----------------------------------------
 h1{
   @include mx_font-styles(
-  $primary-font,px-to-em(36px),lighter,uppercase,$text-align:center,$letter-spacing:-.5px);
-  @media (max-width:799px){
-    //font-size: px-to-em(38px);
-    @include mx_font-styles($font-size: px-to-em(38px));
+    $primary-font,
+    px-to-em(36px),
+    lighter,
+    uppercase,
+    $text-align:center,
+    $letter-spacing:-.5px
+  );
+  @include mq($min:$medium){
+    text-align: left;
   }
-  @media (min-width: 800px){
-    @include mx_font-styles($font-size: px-to-em(42px),$text-align:left);
-  }
-}//--------------------------------------
-//--end--MAIN HEADING
-//----------------------------------------
+  @include mq($min:$large){
+    font-size: px-to-em(42px);
+  };
+}

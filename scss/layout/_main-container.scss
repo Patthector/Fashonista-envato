@@ -2,74 +2,35 @@
 //Main-container.scss
 //==================================================================================================
 body{
-    background-color:getColor('scale-of-grey','Mercury');
+  background-color:getColor('scale-of-grey','Mercury');
   div.main-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
-    grid-gap:0 20px;
-    grid-auto-flow:dense;
-
-    background-color:getColor('scale-of-grey','Mercury');
-
-    @media (max-width:599px){
-      @include flexx(row,wrap,flex-start);
-      width: 90%;
-      margin: 0 5%;
-    }
-    @media (min-width:600px) and (max-width:919px){
+    @include flexx(row,wrap,flex-start);
+    width: 90%;
+    margin: 0 5%;
+    @include mq($min:$tiny){
       display: grid;
       grid-template-columns: repeat(auto-fill,minmax(45%,1fr));
       grid-gap:0 20px;
       grid-auto-flow:dense;
       margin: 0 5%;
     }
-    @media (min-width:920px)and(max-width: 944px){
-      margin: 0 5%;
-      width: 90%;
-    }
-    @media (min-width: 945px){
+    @include mq($min: $medium){
       margin: 0 10%;
       width: 80%;
     }
-    div.div-menu{
-      display: block;
-      background-color:rgba(getColor('scale-of-grey','black'),.9);
-      position: absolute;
-      top:0;
-      left:0;
-      margin:0;
-      padding: 0;
-      width: 100%;
-      height: 100vh;
-      i.fa-times{
-        font-size:px-to-em(30px);
-        display: inline-block;
-        position: absolute;
-        top:20px;
-        right: 20px;
-        color:white;
-        z-index: 1000;
-        &:hover{
-          text-shadow: 0 0 3px #fff;
-        }
-      }
-      ul{
-        margin-top:30%;
-        text-align:center;
-        li {
-          margin:px-to-em(10px) 0;
-          a{
-            color:white;
-            font-size:px-to-em(25px);
-          }
-        }
-      }
+    @include mq($min: $large){
+      grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
     }
   }
   div.load{
-    margin:px-to-em(20px);
+    margin:4% 5%;
     width: 90%;
+    @include mq($min:$large){
+      margin:2% 10%;
+      width: 80%;
+    };
     text-align:center;
+
     button.load{
       @include mx_button(
                         getColor('scale-of-grey','white'),

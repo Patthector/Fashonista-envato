@@ -1,0 +1,19 @@
+//=================================================================
+//COL-#-2.SCSS
+//================================================================
+
+div.footer-col-2{
+  width: 28%;
+  @include mq($max:$medium - 1){
+    width: 100%;
+    padding:0 5%;
+  }
+  @include mq($min:$medium){
+    width: 45%;
+    padding:0 10% 0 0;
+  }
+  @include mq($min:$x-large){
+    width: 28%;
+    padding: 0 2.5%;
+  }
+}

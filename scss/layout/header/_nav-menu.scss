@@ -1,0 +1,30 @@
+//-------------------------------------------------------
+//NAV-MENU/LAYOUT
+//------------------------------------------------------
+//BASIC NAVEGATION IS HIDDEN FOR SMALL SCREENS
+nav {
+  @include mq($max:$medium - 1){
+    display: none;
+  };
+  @include mq($min:$medium){
+    display: block;
+    width:100%;
+    padding:1% 10% 0 10%;
+    ul{
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      li{
+        margin-bottom: 18px;
+        a{
+          padding-bottom: 15px;
+        }
+      }
+    }
+  };
+    @include mq($min:$large){
+      width: 70%;
+    }
+}

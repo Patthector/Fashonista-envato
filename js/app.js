@@ -24,8 +24,6 @@ let rows = Math.ceil(children.length / 3);
 let windowWidth = $(this)["0"].self.innerWidth;
 
 if(windowWidth >= 600 && windowWidth < 919){
-  console.log(windowWidth);
-  console.log("Two columns layout");
   rows = Math.ceil(children.length / 2);
 }
 var auxHeight = Math.ceil($(this).height() * rows);
@@ -45,8 +43,8 @@ let c3=0;
 
 for (let i = 0; i < children.length; i++) {
   let Xcardx = $(`#grid div#card-${i+1}`);
-  var finalResultx = Xcardx["0"]['scrollHeight'] + Xcardx.outerHeight();
-  console.log(`card${i+1} ${finalResultx}`);
+  var finalResultx = Math.ceil(Xcardx["0"]['scrollHeight']) + Math.ceil(Xcardx.outerHeight());
+
   if(windowWidth >= 600 && windowWidth < 919){
     if(isTheSmallestOne(c1,c2,c3 = Number.MAX_VALUE)){
       c1 += finalResultx;
@@ -54,7 +52,6 @@ for (let i = 0; i < children.length; i++) {
     else if(isTheSmallestOne(c2,c1,c3 = Number.MAX_VALUE)){
       c2 += finalResultx;
     }
-    console.log(`c1:${c1}-c2:${c2}-c3${c3}`);
   }
   else{
     if(isTheSmallestOne(c1,c2,c3)){
@@ -77,7 +74,7 @@ if(windowWidth >= 600 && windowWidth < 919){
 //sending the value back to CSS
 //********************************************************
 repetitions = Math.ceil(gridHeight / 10);/*10px*/
-grid.css(`grid-template-rows`,`repeat(${repetitions+2},10px)`);
+grid.css(`grid-template-rows`,`repeat(${repetitions},10px)`);
 
 /*************************************************************/
 //Finding the height of each card
@@ -89,9 +86,12 @@ for (let i = 0; i < children.length; i++) {
   //get how much each card needs to expand
   let cardSpan = Math.ceil(finalResult / 10);
   //later we will add it some margin.
-  $(`#card-${i+1}`).css('grid-row-end',`span ${cardSpan-1}`);
+  $(`#card-${i+1}`).css('grid-row-end',`span ${cardSpan}`);
   //the +1 is here to fix the margin-button problem
 }
+$(window).resize(function(){
+  window.location = window.location;});
+
 
 function isTheSmallestOne(v,sibling1,sibling2){
   return v === Math.min(Math.min(v,sibling1),sibling2);

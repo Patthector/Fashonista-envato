@@ -1,4 +1,4 @@
-.center-content, header h1, .regular-card img, .regular-card h2, body > footer div.footer-menu span {
+.center-content, .regular-card img, .regular-card h2, body > footer div.footer-menu span {
   text-align: center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -424,78 +424,81 @@ a {
 
 header {
   box-shadow: 0 0 40px #999999;
-  width: 100%; }
-  @media (max-width: 799px) {
+  width: 100%;
+  /*HEADING-TITLE=================================================*/
+  /*==============================================================*/
+  /*CARET=================================================*/
+  /*==============================================================*/
+  /*SECONDARY-MENU=================================================*/
+  /*==============================================================*/
+  /*SOCIAL-MEDIA-MENU=================================================*/
+  /*==============================================================*/
+  /*NAV-MENU=================================================*/
+  /*==============================================================*/ }
+  @media (max-width: 719px) {
     header {
+      padding-bottom: 10px;
       margin-bottom: 1.25em; } }
-  @media (min-width: 800px) {
+  @media (min-width: 720px) {
     header {
       margin-bottom: 1.875em; } }
   header h1 {
-    margin-bottom: 0; }
-    @media (max-width: 799px) {
-      header h1 {
-        margin-top: 15px; } }
-    @media (min-width: 800px) {
+    margin: .5em 0 0 0; }
+    @media (min-width: 720px) {
       header h1 {
         width: 55%;
         display: inline-block;
-        margin-top: .5em;
         padding: 0 0 0 10%;
         text-align: left; } }
-  header div.caret {
-    display: block;
-    width: 100%;
-    text-align: center; }
-    @media (min-width: 800px) {
-      header div.caret {
+  header li.caret {
+    display: inline-block;
+    border: 0.5px solid #cccccc;
+    padding: 0 7px 5px 7px; }
+    @media (min-width: 720px) {
+      header li.caret {
         display: none; } }
-  header > ul.secondary-menu {
+  header ul.secondary-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    padding: 0 0.9375em; }
-    header > ul.secondary-menu li {
+    padding: 0 5%; }
+    header ul.secondary-menu li {
       padding-left: 0.3125em;
       margin: 0.625em 0; }
-    header > ul.secondary-menu li:last-child {
+    header ul.secondary-menu li:last-child {
       margin-left: auto; }
-    @media (min-width: 800px) {
-      header > ul.secondary-menu {
+      header ul.secondary-menu li:last-child i {
+        padding-right: 5px; }
+    @media (min-width: 720px) {
+      header ul.secondary-menu {
         padding: 0 10%; } }
   header ul.social-media-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    margin: 0 0 1.25em 0;
-    padding: 0.625em 0; }
+    padding: 0 0 0.625em 0; }
     header ul.social-media-menu li {
       margin: 0.4375em; }
+      header ul.social-media-menu li.caret {
+        margin: 0.1875em; }
       header ul.social-media-menu li i {
-        font-size: 1.125em;
+        font-size: 1em;
         color: #333333; }
-      @media (min-width: 800px) and (max-width: 944px) {
-        header ul.social-media-menu li:last-child {
-          margin-right: 0; } }
-    @media (min-width: 800px) {
+    @media (min-width: 720px) {
       header ul.social-media-menu {
         width: 40%;
         float: right;
         padding: 0 10% 0 0;
         margin: 20px 0 10px 0;
         justify-content: flex-end; }
-        header ul.social-media-menu::after {
-          content: "";
-          display: table;
-          clear: both; }
         header ul.social-media-menu li:last-child {
           margin-rigth: 0; } }
-  @media (max-width: 799px) {
+  @media (max-width: 719px) {
     header nav {
       display: none; } }
-  @media (min-width: 800px) {
+  @media (min-width: 720px) {
     header nav {
       display: block;
       width: 100%;
@@ -505,13 +508,12 @@ header {
         width: 100%;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
-        margin: 1% 0 0 0; }
+        justify-content: space-between; }
         header nav ul li {
           margin-bottom: 18px; }
           header nav ul li a {
             padding-bottom: 15px; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 945px) {
     header nav {
       width: 70%; } }
 
@@ -544,72 +546,88 @@ body > footer {
       height: 100%; }
   body > footer div.footer-col-1 {
     width: 32%; }
-    body > footer div.footer-col-1 footer:parent {
-      background-color: red; }
     @media (max-width: 719px) {
       body > footer div.footer-col-1 {
-        width: 100%; } }
-    @media (min-width: 720px) and (max-width: 1023px) {
+        width: 100%;
+        padding: 0 5%; } }
+    @media (min-width: 720px) {
       body > footer div.footer-col-1 {
-        width: 40%; } }
+        width: 45%;
+        padding-left: 10%; } }
     @media (min-width: 1024px) {
       body > footer div.footer-col-1 {
-        width: 30%; } }
+        width: 36%; } }
   body > footer div.footer-col-2 {
     width: 28%; }
     @media (max-width: 719px) {
       body > footer div.footer-col-2 {
-        width: 100%; } }
-    @media (min-width: 720px) and (max-width: 1023px) {
+        width: 100%;
+        padding: 0 5%; } }
+    @media (min-width: 720px) {
       body > footer div.footer-col-2 {
-        width: 40%; } }
+        width: 45%;
+        padding: 0 10% 0 0; } }
     @media (min-width: 1024px) {
       body > footer div.footer-col-2 {
-        width: 30%; } }
+        width: 28%;
+        padding: 0 2.5%; } }
   body > footer div.footer-social-media {
-    width: 32%; }
+    width: 36%; }
     @media (max-width: 719px) {
       body > footer div.footer-social-media {
-        width: 100%; } }
-    @media (min-width: 720px) and (max-width: 1023px) {
+        width: 100%;
+        padding: 0 5%; } }
+    @media (min-width: 720px) {
       body > footer div.footer-social-media {
-        width: 40%; } }
+        width: 45%;
+        padding-left: 10%; } }
     @media (min-width: 1024px) {
       body > footer div.footer-social-media {
-        width: 30%; } }
+        width: 36%;
+        padding: 0 10% 0 0; } }
+    body > footer div.footer-social-media ul.social-media-menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start; }
+      body > footer div.footer-social-media ul.social-media-menu li {
+        margin: 1.25em 0.9375em; }
+        body > footer div.footer-social-media ul.social-media-menu li i {
+          color: gray;
+          font-size: 1.25em; }
   body > footer div.footer-menu {
     width: 100%;
-    margin-top: 2.5em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center; }
+    @media (min-width: 680px) {
+      body > footer div.footer-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 5%; } }
+    @media (min-width: 720px) {
+      body > footer div.footer-menu {
+        padding: 0 10%; } }
     body > footer div.footer-menu span {
-      font-size: 0.8125em;
-      margin-top: 0.9375em; }
+      font-size: 0.6875em;
+      margin: .7em; }
     body > footer div.footer-menu ul {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: center;
-      margin: 0.9375em 0; }
+      margin: .7em; }
       body > footer div.footer-menu ul li {
-        font-size: 0.8125em; }
+        font-size: 0.6875em; }
         body > footer div.footer-menu ul li:nth-last-child(n+ 2)::after {
           content: "|";
           display: inline-block;
           padding-left: 0.3125em;
-          color: #333333; }
-  body > footer ul.social-media-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    body > footer ul.social-media-menu li {
-      margin: 1.25em 0.9375em; }
-      body > footer ul.social-media-menu li i {
-        color: gray;
-        font-size: 1.25em; }
+          color: #666666; }
 
 .regular-card {
   width: 100%; }
@@ -622,12 +640,11 @@ body > footer {
     text-transform: uppercase; }
   .regular-card footer ul {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-content: center;
     border-top: 0.5px dotted #cccccc;
-    margin: 0.625em 0;
     padding: 0.625em 0; }
     .regular-card footer ul li:not(:last-child) {
       margin-right: 1.25em; }
@@ -637,66 +654,34 @@ body > footer {
 body {
   background-color: #e6e6e6; }
   body div.main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    grid-gap: 0 20px;
-    grid-auto-flow: dense;
-    background-color: #e6e6e6; }
-    @media (max-width: 599px) {
-      body div.main-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 90%;
-        margin: 0 5%; } }
-    @media (min-width: 600px) and (max-width: 919px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 5%; }
+    @media (min-width: 550px) {
       body div.main-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
         grid-gap: 0 20px;
         grid-auto-flow: dense;
         margin: 0 5%; } }
-    @media (min-width: 920px) and (max-width: 944px) {
-      body div.main-container {
-        margin: 0 5%;
-        width: 90%; } }
-    @media (min-width: 945px) {
+    @media (min-width: 720px) {
       body div.main-container {
         margin: 0 10%;
         width: 80%; } }
-    body div.main-container div.div-menu {
-      display: block;
-      background-color: rgba(0, 0, 0, 0.9);
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100vh; }
-      body div.main-container div.div-menu i.fa-times {
-        font-size: 1.875em;
-        display: inline-block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: white;
-        z-index: 1000; }
-        body div.main-container div.div-menu i.fa-times:hover {
-          text-shadow: 0 0 3px #fff; }
-      body div.main-container div.div-menu ul {
-        margin-top: 30%;
-        text-align: center; }
-        body div.main-container div.div-menu ul li {
-          margin: 0.625em 0; }
-          body div.main-container div.div-menu ul li a {
-            color: white;
-            font-size: 1.5625em; }
+    @media (min-width: 945px) {
+      body div.main-container {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); } }
   body div.load {
-    margin: 1.25em;
+    margin: 4% 5%;
     width: 90%;
     text-align: center; }
+    @media (min-width: 945px) {
+      body div.load {
+        margin: 2% 10%;
+        width: 80%; } }
     body div.load button.load {
       width: 100%;
       background-color: #FFFFFF;
@@ -747,14 +732,14 @@ body {
 
 header {
   background-color: #FFFFFF; }
-  header > ul.secondary-menu {
+  header ul.secondary-menu {
     background-color: #0d0d0d;
     color: #b3b3b3; }
-    header > ul.secondary-menu li {
+    header ul.secondary-menu li {
       font-family: "Open Sans", sans-serif;
       font-size: 0.8125em;
       letter-spacing: -0.5px; }
-    header > ul.secondary-menu li:nth-last-child(n+ 3)::after {
+    header ul.secondary-menu li:nth-last-child(n+ 3)::after {
       content: "|";
       display: inline-block;
       padding-left: 0.3125em;
@@ -766,31 +751,30 @@ header {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: -0.5px; }
-    @media (max-width: 799px) {
+    @media (min-width: 720px) {
       header h1 {
-        font-size: 2.375em; } }
-    @media (min-width: 800px) {
-      header h1 {
-        font-size: 2.625em;
         text-align: left; } }
-  header div.caret {
-    margin-bottom: .5em; }
-    header div.caret i {
-      color: gray;
-      font-size: 1.5625em; }
-      header div.caret i.fa-angle-double-down {
-        transition: all 1s  ;
-        transform: translateY(0) scale(1);
-        color: gray; }
-    header div.caret:hover i.fa-angle-double-down {
+    @media (min-width: 945px) {
+      header h1 {
+        font-size: 2.625em; } }
+  header li.caret {
+    font-size: 20px;
+    transition: all 1s  ;
+    transform: scale(1);
+    background-color: #FFFFFF; }
+    header li.caret:hover {
       transition: all 1s  ;
-      transform: translateY(5px) scale(1.3);
-      color: #333333; }
+      transform: scale(1.1);
+      background-color: #e6e6e6; }
   header ul#toggle-menu {
-    width: 60%;
-    margin: 0 20%;
+    width: 40%;
+    margin: 10px 30%;
     text-align: center;
     background-color: #000000; }
+    @media (max-width: 550px) {
+      header ul#toggle-menu {
+        width: 60%;
+        margin: 0 20%; } }
     header ul#toggle-menu li {
       padding: .5em 0; }
       header ul#toggle-menu li a {
@@ -805,11 +789,11 @@ header {
     text-transform: uppercase; }
     header nav ul li a:hover {
       border-bottom: 3px solid #000000; }
-    @media (min-width: 800px) {
+    @media (min-width: 720px) {
       header nav ul li a {
         font-size: 0.6875em;
         letter-spacing: 1px; } }
-    @media (min-width: 945px) {
+    @media (min-width: 1023px) {
       header nav ul li a {
         font-size: 0.75em; } }
 
@@ -834,20 +818,18 @@ body > footer p {
   line-height: 1.7;
   margin: 0 0.9375em; }
 body > footer ul.recent-post {
-  list-style-type: decimal;
-  margin: 0 0.9375em; }
+  list-style-type: decimal; }
   body > footer ul.recent-post li {
     color: #666666;
     border-bottom: 0.5px dotted #333333;
-    padding-bottom: 0.625em;
-    margin: 10px 0;
+    padding: 0.875em 0 0.75em 0;
     font-size: 0.8125em; }
 body > footer div.footer-menu {
   background-color: #000000; }
   body > footer div.footer-menu span {
-    color: #4d4d4d;
+    color: gray;
     display: inline-block; }
-  body > footer div.footer-menu ul li {
-    color: #4d4d4d; }
+  body > footer div.footer-menu ul li a {
+    color: gray; }
 
 /*# sourceMappingURL=application.css.map */

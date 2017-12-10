@@ -1,7 +1,6 @@
 //=========================================================================================================
 //footer.scss/COMPONENT
 //==================================================================================================
-
 //You need to target that particular footer because you
 //have another footer inside regular-card component
 body > footer{
@@ -30,26 +29,22 @@ body > footer{
 
  ul.recent-post{
    list-style-type: decimal;
-   margin:0 px-to-em($basic-margin);
    li{
       color:getColor('scale-of-grey','Dove Gray');
       border-bottom: .5px dotted getColor('scale-of-grey','Mine Shaft');
-      padding-bottom: px-to-em(10px);
-      margin:10px 0;
+      padding: px-to-em(14px) 0 px-to-em(12px) 0;
       font-size: px-to-em($paragraph-font-size);
     }
  }
-
-
   div.footer-menu{
     background-color: getColor('scale-of-grey','black');
     span{
-      color: getColor('scale-of-grey','Tundora');
+      color: getColor('scale-of-grey','grey');
       display: inline-block;
       @extend .center-content;
     }
-    ul li{
-      color: getColor('scale-of-grey','Tundora');
+    ul li a{
+      color: getColor('scale-of-grey','grey');
     }
   }
 

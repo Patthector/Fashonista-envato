@@ -7,11 +7,11 @@ nav ul li {
     &:hover{
       border-bottom:3px solid getColor('scale-of-grey','black');
     }
-    @media (min-width:800px){
+    @include mq($min:$medium){
       font-size:px-to-em(11px);
       letter-spacing: 1px;
     }
-    @media (min-width: 945px){
+    @include mq($min:$x-large - 1){
       font-size:px-to-em(12px);
     }
   }

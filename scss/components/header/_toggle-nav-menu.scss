@@ -2,8 +2,12 @@
 //NAVEGATION MENU FOR SMALL SCREENS
 //--------------------------------------
 ul#toggle-menu{
-  width: 60%;
-  margin:0 20%;
+  width: 40%;
+  margin:10px 30%;
+  @include mq($max:$tiny){
+    width: 60%;
+    margin:0 20%;
+  };
   text-align: center;
   background-color: getColor('scale-of-grey','black');
   li{
@@ -16,6 +20,4 @@ ul#toggle-menu{
       }
     }
   }
-}  //---------------------------------------
-  //--end--NAVEGATION MENU FOR SMALL SCREENS
-  //--------------------------------------
+}

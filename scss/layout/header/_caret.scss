@@ -1,0 +1,12 @@
+//---------------------------------------
+//CARET/BUTTON/TOGGLE FOR NAVEGATION MENU
+//--------------------------------------
+li.caret{
+  display: inline-block;
+  border: .5px solid getColor('scale-of-grey','Silver');
+  padding: 0 7px 5px 7px;
+
+  @include mq($min:$medium){
+    display: none;
+  };
+}

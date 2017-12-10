@@ -1,7 +1,7 @@
 //-------------------------------------------------------
-//SECONDARY MENU
+//SECONDARY MENU/COMPONENTS
 //------------------------------------------------------
-& > ul.secondary-menu{
+ul.secondary-menu{
   background-color : getColor('scale-of-grey','Almost Black');
   color:getColor('scale-of-grey','Nobel');
   li{
@@ -10,6 +10,4 @@
   li{
     @include leading-bars(getColor('scale-of-grey','Mine Shaft'),5px,3);
   }
-}//--------------------------------------
-//--end--SECONDARY-MENU
-//----------------------------------------
+}

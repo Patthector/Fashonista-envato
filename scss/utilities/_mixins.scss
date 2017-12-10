@@ -78,3 +78,26 @@
   transition: all #{$duration} #{$delay} #{$func};
   @content;
 }
+
+//MEDIA QUERIES--convention: If $minScreenSize is not passed
+//that means we are talking just about maz-width, and
+//in reverse min-width..
+@mixin mq($min : null,$max : null) {
+  @if ($min and $max){//min-width and max-width are defined
+    @media (min-width:$min) and (max-width:$max){
+      @content;
+    }
+  }
+  @elseif ($min){//min-width is defined
+    @media (min-width:$min){
+      @content;
+    }
+  }
+  @elseif ($max){//max-width is defined
+    @media (max-width:$max){
+      @content;
+    }
+  }
+
+
+}

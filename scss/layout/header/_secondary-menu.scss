@@ -1,0 +1,22 @@
+//-------------------------------------------------------
+//SECONDARY MENU/LAYOUT
+//------------------------------------------------------
+
+ul.secondary-menu {
+  @include flexx(row,nowrap,flex-start){
+    padding: 0 5%;
+  }
+  & li{
+    padding-left:px-to-em(5px);
+    margin: px-to-em(10px) 0;
+  }
+  & li:last-child{
+    margin-left: auto;
+    i{
+      padding-right: 5px;
+    }
+  }
+  @include mq($min:$medium){
+    padding: 0 10%;
+  };
+}
