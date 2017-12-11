@@ -93,7 +93,7 @@
       //later we will add it some margin.
       $(`#card-${i+1}`).css('grid-row-end',`span ${cardSpan}`);
       //the +1 is here to fix the margin-button problem
-    }
+
   }
 
   function isTheSmallestOne(v,sibling1,sibling2){
