@@ -112,6 +112,10 @@
 
   });
 
+  $( window ).on( "orientationchange", function() {
+    window.location = window.location;
+  });
+
   $(window).on('resize',function() {
     console.log("The page resize");
     console.log(width);
