@@ -95,6 +95,7 @@
       //the +1 is here to fix the margin-button problem
 
   }
+}
 
   function isTheSmallestOne(v,sibling1,sibling2){
     return v === Math.min(Math.min(v,sibling1),sibling2);
