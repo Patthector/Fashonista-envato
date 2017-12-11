@@ -3,6 +3,7 @@ $('#nav-button').on('click',function(){
   $('#toggle-menu').slideToggle('slow');
 });
 
+console.log("jquery hre");
 
 //THE GRID
 
@@ -89,10 +90,14 @@ for (let i = 0; i < children.length; i++) {
   $(`#card-${i+1}`).css('grid-row-end',`span ${cardSpan}`);
   //the +1 is here to fix the margin-button problem
 }
-$(window).resize(function(){
-  window.location = window.location;});
-
-
 function isTheSmallestOne(v,sibling1,sibling2){
   return v === Math.min(Math.min(v,sibling1),sibling2);
 }
+$( "#1" ).attr('href','./css/application.css');
+
+var width = $(window).width();
+$(window).on('resize', function(){
+   if($(this).width() != width){
+     window.location = window.location;
+   }
+});
