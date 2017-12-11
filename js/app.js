@@ -96,7 +96,7 @@ function isTheSmallestOne(v,sibling1,sibling2){
 
 
 var width = $(window).width();
-$(window).on('resize', function(){
+$(this).on('resize', function(){
    if($(this).width() != width){
      var element = $('nav ul');
      $('#nav-button').on('click',function(){
