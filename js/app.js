@@ -1,3 +1,5 @@
+
+  var width = $(window).width();
   var element = $('nav ul');
   $('#nav-button').on('click',function(){
     $('#toggle-menu').slideToggle('slow');
@@ -112,5 +114,9 @@
 
   $(window).on('resize',function() {
     console.log("The page resize");
-    document.location = document.location;
+    console.log(width);
+    console.log($(window).width());
+    if($(window).width() != width){
+      window.location = window.location;
+    }
   });
